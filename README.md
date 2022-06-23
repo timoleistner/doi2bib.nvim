@@ -9,7 +9,6 @@ A simple plugin which replaces a DOI link with the corresponding BibTex entry us
 
 ## 📦 Installation
 
-### Manually
 ### [Packer](https://github.com/wbthomason/packer.nvim)
 <!-- -- Lua -->
 ```Lua
