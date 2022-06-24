@@ -27,7 +27,7 @@ Example mapping:
 
 ```Lua
 vim.api.nvim_set_keymap(
-    'n', 'gb', '<cmd>Doi2Bib<cr>',
+    'n', 'gb', '<cmd>lua require("doi2bib").doi2bib()<cr>',
     { noremap = true, silent = true }
 )
 ```
