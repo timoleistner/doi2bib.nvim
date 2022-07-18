@@ -10,4 +10,4 @@ let g:loaded_exampleplugin = 1
 
 " Exposes the plugin's functions for use as commands in Neovim.
 command! -nargs=* Doi2Bib lua require("doi2bib").doi2bib()
-command! -nargs=* Doi2Bib lua require("doi2bib").doi2url()
+command! -nargs=* Doi2URL lua require("doi2bib").doi2url()
