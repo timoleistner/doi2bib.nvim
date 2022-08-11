@@ -1,19 +1,19 @@
 #!/usr/bin/env lua
-local curl = require("cURL")
 local util = require("doi2bib.util")
 
 local Doi2Bib = {}
 
---- get bibtex entry as a table
 local function get_bibentry()
+
     local doi = vim.call('expand', '<cWORD>')
     local url = "http://api.crossref.org/works/" .. doi .. "/transform/application/x-bibtex"
-    local c = curl.easy{ url = url }
-    local body = {}
-    c:setopt_writefunction(table.insert, body)
-    c:perform()
-    local curl_string = table.concat(body)
-    return util.split(curl_string, "\n")
+    local cmd = "curl -s"
+    local handle = assert(io.popen(cmd .. " " .. url, 'r'))
+    local result = handle:read('*a')
+    handle:close()
+    -- print(type(result))
+    return util.split(result, "\n")
+
 end
 
 --- Replaces <cWORD> DOI with the corresponding bibtex entry
