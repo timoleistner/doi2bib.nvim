@@ -12,10 +12,7 @@ A simple plugin which replaces a DOI link with the corresponding BibTex entry us
 ### [Packer](https://github.com/wbthomason/packer.nvim)
 <!-- -- Lua -->
 ```Lua
-use({
-    "timoleistner/doi2bib/",
-    rocks = { "Lua-cURL" },
-})
+use({ "timoleistner/doi2bib/" })
 ```
 
 ## 🌱 Usage
