@@ -5,7 +5,7 @@ A simple plugin which replaces a DOI link with the corresponding BibTex entry us
 
 ## ⚡️ Requirements
 - Internet connection
-- Lua-cURL available via LuaRocks
+- curl
 
 ## 📦 Installation
 

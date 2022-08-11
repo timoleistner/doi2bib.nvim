@@ -11,7 +11,6 @@ local function get_bibentry()
     local handle = assert(io.popen(cmd .. " " .. url, 'r'))
     local result = handle:read('*a')
     handle:close()
-    -- print(type(result))
     return util.split(result, "\n")
 
 end
