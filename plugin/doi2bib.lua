@@ -5,4 +5,5 @@ if vim.g.loaded_doi2bib then
 end
 
 vim.api.nvim_create_user_command('Doi2Bib', function() require("doi2bib").doi2bib() end, { nargs = '*' })
--- vim.api.nvim_add_user_command('Upper', 'echo toupper(<q-args>)', { nargs = 1 })
+vim.api.nvim_create_user_command('Doi2Url', function() require("doi2bib").doi2url() end, { nargs = '*' })
+
